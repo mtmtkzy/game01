@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catch the Dot</title>
+    <title>漢字読みクイズ（小学3年生）</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Catch the Dot!</h1>
-    <div class="game-container">
-        <canvas id="gameCanvas" width="800" height="600"></canvas>
-        <div class="score-board">
-            <p>スコア: <span id="score">0</span></p>
-            <p>ハイスコア: <span id="highScore">0</span></p>
-            <button id="startButton">ゲームスタート</button>
+    <div class="container">
+        <h1>漢字読みクイズ</h1>
+        <div class="quiz-area">
+            <p id="questionKanji" class="kanji-display"></p>
+            <input type="text" id="answerInput" placeholder="読みを入力してください">
+            <button id="submitButton">回答する</button>
+            <p id="resultMessage" class="message"></p>
+            <button id="nextButton" class="hidden">次の問題</button>
+        </div>
+        <div class="score-area">
+            <p>正解数: <span id="correctCount">0</span> / <span id="totalCount">0</span></p>
         </div>
     </div>
 
